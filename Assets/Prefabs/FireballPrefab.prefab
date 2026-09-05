@@ -153,3 +153,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fireball
   speed: 10
   damage: 1
+  soulPrefab: {fileID: 2627831904199555875, guid: baacc08fcebcb8c48b04d52e0eae128d, type: 3}
