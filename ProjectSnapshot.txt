@@ -1,0 +1,356 @@
+=== FULL UNITY PROJECT SNAPSHOT ===
+Active Scene: HouseInteriorScene
+Export Date: 9/5/2026 2:25:12 PM
+
+--- SCENE HIERARCHY & COMPONENTS ---
+- Main Camera (Active: True)
+    [Component: Transform]
+    [Component: Camera]
+    [Component: AudioListener]
+    [Component: UniversalAdditionalCameraData]
+    [Component: CameraFollow]
+- HouseInterior_Layout (Active: True)
+    [Component: Transform]
+    [Component: SpriteRenderer]
+  - Colliders (Active: True)
+      [Component: Transform]
+    - Wall (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (1) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (2) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (6) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (7) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (8) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (9) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (10) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (11) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (12) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (13) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (14) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (15) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (16) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (17) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (18) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (19) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (20) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (21) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (22) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (23) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (4) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (3) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+    - Wall (5) (Active: True)
+        [Component: Transform]
+        [Component: BoxCollider2D]
+- Player (Active: True)
+    [Component: Transform]
+    [Component: SpriteRenderer]
+    [Component: PlayerMovement]
+    [Component: BoxCollider2D]
+    [Component: Rigidbody2D]
+- ExitDoorTrigger (Active: True)
+    [Component: Transform]
+    [Component: BoxCollider2D]
+    [Component: ExitBuilding]
+
+--- C# SCRIPTS SOURCE CODE ---
+
+// ----------------------------------------
+// FILE: Assets/Scripts\BuildingInteraction.cs
+// ----------------------------------------
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class BuildingInteraction : MonoBehaviour
+{
+    private bool isNearDoor = false;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.gameObject.name == "Player")
+        {
+            isNearDoor = true;
+            Debug.Log("Press 'E' to enter the house!");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.gameObject.name == "Player")
+        {
+            isNearDoor = false;
+            Debug.Log("Left the door.");
+        }
+    }
+
+    void Update()
+    {
+        if (isNearDoor && Input.GetKeyDown(KeyCode.E))
+        {
+            EnterBuilding();
+        }
+    }
+
+    void EnterBuilding()
+    {
+        Debug.Log("Entering the house interior!");
+        SceneManager.LoadScene("HouseInteriorScene");
+    }
+}
+
+// ----------------------------------------
+// FILE: Assets/Scripts\CameraFollow.cs
+// ----------------------------------------
+
+using UnityEngine;
+
+public class CameraFollow : MonoBehaviour
+{
+    public Transform target;
+    public float smoothSpeed = 5f;
+    public Vector3 offset = new Vector3(0f, 0f, -10f);
+
+    [Header("Background Reference")]
+    public SpriteRenderer backgroundSprite; // Drag your HouseInterior_Layout here
+
+    private float minX, maxX, minY, maxY;
+    private Camera cam;
+
+    void Start()
+    {
+        cam = GetComponent<Camera>();
+        CalculateBounds();
+    }
+
+    void CalculateBounds()
+    {
+        if (backgroundSprite == null) return;
+
+        // Calculate camera dimensions in world units
+        float vertExtent = cam.orthographicSize;
+        float horzExtent = vertExtent * Screen.width / Screen.height;
+
+        // Get background bounds
+        Bounds bgBounds = backgroundSprite.bounds;
+
+        // Set camera movement limits so the camera view never goes past the background edges
+        minX = bgBounds.min.x + horzExtent;
+        maxX = bgBounds.max.x - horzExtent;
+        minY = bgBounds.min.y + vertExtent;
+        maxY = bgBounds.max.y - vertExtent;
+    }
+
+    void LateUpdate()
+    {
+        if (target == null) return;
+
+        Vector3 desiredPosition = target.position + offset;
+
+        // If background is assigned, clamp to its edges; otherwise follow freely
+        if (backgroundSprite != null)
+        {
+            float clampedX = Mathf.Clamp(desiredPosition.x, minX, maxX);
+            float clampedY = Mathf.Clamp(desiredPosition.y, minY, maxY);
+            desiredPosition = new Vector3(clampedX, clampedY, desiredPosition.z);
+        }
+
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+        transform.position = smoothedPosition;
+    }
+}
+
+// ----------------------------------------
+// FILE: Assets/Scripts\ExitBuilding.cs
+// ----------------------------------------
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class ExitBuilding : MonoBehaviour
+{
+    private bool isNearExit = false;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.gameObject.name == "Player")
+        {
+            isNearExit = true;
+            Debug.Log("Press 'E' to exit back to the town!");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") || other.gameObject.name == "Player")
+        {
+            isNearExit = false;
+            Debug.Log("Left the exit.");
+        }
+    }
+
+    void Update()
+    {
+        if (isNearExit && Input.GetKeyDown(KeyCode.E))
+        {
+            ExitHouse();
+        }
+    }
+
+    void ExitHouse()
+    {
+        Debug.Log("Returning to HometownScene!");
+        SceneManager.LoadScene("HometownScene");
+    }
+}
+
+// ----------------------------------------
+// FILE: Assets/Scripts\PlayerMovement.cs
+// ----------------------------------------
+
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        // Get input from WASD or Arrow keys
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        movement = movement.normalized;
+    }
+
+    void FixedUpdate()
+    {
+        // Move the player
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+}
+
+// ----------------------------------------
+// FILE: Assets/Scripts\ProjectSnapshot.cs
+// ----------------------------------------
+
+using UnityEngine;
+using UnityEditor;
+using UnityEngine.SceneManagement;
+using System.IO;
+using System.Text;
+
+public class ProjectSnapshot : EditorWindow
+{
+    [MenuItem("Tools/Export Full Project Snapshot")]
+    public static void ExportSnapshot()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine("=== FULL UNITY PROJECT SNAPSHOT ===");
+        sb.AppendLine($"Active Scene: {SceneManager.GetActiveScene().name}");
+        sb.AppendLine($"Export Date: {System.DateTime.Now}\n");
+
+        // 1. Scene Hierarchy Dump
+        sb.AppendLine("--- SCENE HIERARCHY & COMPONENTS ---");
+        GameObject[] rootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+        foreach (GameObject root in rootObjects)
+        {
+            DumpGameObject(root, sb, 0);
+        }
+        sb.AppendLine();
+
+        // 2. Scripts Dump
+        sb.AppendLine("--- C# SCRIPTS SOURCE CODE ---");
+        string scriptsPath = Application.dataPath + "/Scripts";
+        if (Directory.Exists(scriptsPath))
+        {
+            string[] scriptFiles = Directory.GetFiles(scriptsPath, "*.cs", SearchOption.AllDirectories);
+            foreach (string file in scriptFiles)
+            {
+                string relativePath = file.Replace(Application.dataPath, "Assets");
+                sb.AppendLine($"\n// ----------------------------------------");
+                sb.AppendLine($"// FILE: {relativePath}");
+                sb.AppendLine($"// ----------------------------------------\n");
+                sb.AppendLine(File.ReadAllText(file));
+            }
+        }
+
+        // Save snapshot text file right outside the Assets folder in the project root directory
+        string projectRoot = Directory.GetParent(Application.dataPath).FullName;
+        string outputPath = Path.Combine(projectRoot, "ProjectSnapshot.txt");
+        File.WriteAllText(outputPath, sb.ToString());
+
+        EditorUtility.DisplayDialog("Snapshot Created!", $"Project snapshot saved to root folder:\n{outputPath}", "OK");
+        EditorUtility.RevealInFinder(outputPath);
+    }
+
+    private static void DumpGameObject(GameObject obj, StringBuilder sb, int indent)
+    {
+        string indentation = new string(' ', indent * 2);
+        sb.AppendLine($"{indentation}- {obj.name} (Active: {obj.activeSelf})");
+        
+        Component[] components = obj.GetComponents<Component>();
+        foreach (Component comp in components)
+        {
+            if (comp != null)
+            {
+                sb.AppendLine($"{indentation}    [Component: {comp.GetType().Name}]");
+            }
+        }
+
+        foreach (Transform child in obj.transform)
+        {
+            DumpGameObject(child.gameObject, sb, indent + 1);
+        }
+    }
+}
