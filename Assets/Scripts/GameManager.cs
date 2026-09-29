@@ -11,23 +11,54 @@ public class GameManager : MonoBehaviour
 
     [Header("Souls (Raid Currency)")]
     public int totalSouls = 0;
-    public TextMeshProUGUI soulsText; // Optional: drag UI text here later if you want
+    public TextMeshProUGUI soulsText;
 
     void Awake()
     {
+        // Prevent duplicates across scene transitions
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keeps it alive across scenes!
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
+            // If a GameManager already exists, destroy the newly loaded duplicate 
+            // BUT ensure we don't lose data if needed, or simply let the original persist.
             Destroy(gameObject);
+            return;
         }
     }
 
     void Start()
     {
+        FindTextReferences();
+        UpdateScoreText();
+        UpdateSoulsText();
+    }
+
+    void Update()
+    {
+        if (scoreText == null || soulsText == null)
+        {
+            FindTextReferences();
+        }
+    }
+
+    void FindTextReferences()
+    {
+        if (scoreText == null)
+        {
+            GameObject coinObj = GameObject.Find("CoinsText");
+            if (coinObj != null) scoreText = coinObj.GetComponent<TextMeshProUGUI>();
+        }
+
+        if (soulsText == null)
+        {
+            GameObject soulObj = GameObject.Find("SoulsText");
+            if (soulObj != null) soulsText = soulObj.GetComponent<TextMeshProUGUI>();
+        }
+        
         UpdateScoreText();
         UpdateSoulsText();
     }

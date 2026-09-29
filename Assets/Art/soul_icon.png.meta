@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: 3d4047ca109b3b74ba577e477ef0aa45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9153879706664261714
+    second: soul_icon_0
+  - first:
+      213: -1409206245329384922
+    second: soul_icon_1
+  - first:
+      213: -4304568573157772154
+    second: soul_icon_2
+  - first:
+      213: -864988760708811011
+    second: soul_icon_3
+  - first:
+      213: 5134074964006629176
+    second: soul_icon_4
+  - first:
+      213: -3118616495612376694
+    second: soul_icon_5
+  - first:
+      213: -5775547363380549290
+    second: soul_icon_6
+  - first:
+      213: -233243387383000803
+    second: soul_icon_7
+  - first:
+      213: 6705431138515550129
+    second: soul_icon_8
+  - first:
+      213: 483021295466168598
+    second: soul_icon_9
+  - first:
+      213: 4860616295007433257
+    second: soul_icon_10
+  - first:
+      213: 1984830760018372070
+    second: soul_icon_11
+  - first:
+      213: 1154371103680154251
+    second: soul_icon_12
+  - first:
+      213: -8581084132497014009
+    second: soul_icon_13
+  - first:
+      213: 2681024252365041170
+    second: soul_icon_14
+  - first:
+      213: -8277190789695704227
+    second: soul_icon_15
+  - first:
+      213: 3387141349105894332
+    second: soul_icon_16
+  - first:
+      213: 5640329720414264864
+    second: soul_icon_17
+  - first:
+      213: -6961153632448601847
+    second: soul_icon_18
+  - first:
+      213: -6524537757656231892
+    second: soul_icon_19
+  - first:
+      213: -1630938334276183303
+    second: soul_icon_20
+  - first:
+      213: 2627472425305225946
+    second: soul_icon_21
+  - first:
+      213: 3870704777653929922
+    second: soul_icon_22
+  - first:
+      213: -6801071055073683561
+    second: soul_icon_23
+  - first:
+      213: 8168940525000379515
+    second: soul_icon_24
+  - first:
+      213: -2041998136166760537
+    second: soul_icon_25
+  - first:
+      213: -3326199413597380765
+    second: soul_icon_26
+  - first:
+      213: 3135403627050605760
+    second: soul_icon_27
+  - first:
+      213: -7605211262172713800
+    second: soul_icon_28
+  - first:
+      213: 7003553376794417245
+    second: soul_icon_29
+  - first:
+      213: 3428140332951915821
+    second: soul_icon_30
+  - first:
+      213: -5728405564376546379
+    second: soul_icon_31
+  - first:
+      213: -8764993730268810820
+    second: soul_icon_32
+  - first:
+      213: 1576092191343349904
+    second: soul_icon_33
+  - first:
+      213: 6843191908533352281
+    second: soul_icon_34
+  - first:
+      213: -8190062001651982185
+    second: soul_icon_35
+  - first:
+      213: 1914774993687383779
+    second: soul_icon_36
+  - first:
+      213: 9014368338393493766
+    second: soul_icon_37
+  - first:
+      213: -2159536078197915687
+    second: soul_icon_38
+  - first:
+      213: -1505111369289622620
+    second: soul_icon_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soul_icon_0
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1173
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2585168081d190f70800000000000000
+      internalID: 9153879706664261714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_1
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1212
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a41ebd26e717ce0800000000000000
+      internalID: -1409206245329384922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1237
+        height: 1172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684fe9570b91344c0800000000000000
+      internalID: -4304568573157772154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 827
+        width: 102
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6fe371e41fef3f0800000000000000
+      internalID: -864988760708811011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_4
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 835
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f67df6af5ef3740800000000000000
+      internalID: 5134074964006629176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 813
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a89c95402d278b4d0800000000000000
+      internalID: -3118616495612376694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 714
+        width: 35
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 659224ee54229dfa0800000000000000
+      internalID: -5775547363380549290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_7
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 714
+        width: 65
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11d3dcff5a53ccf0800000000000000
+      internalID: -233243387383000803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_8
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 769
+        width: 63
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bfff05f71a7e0d50800000000000000
+      internalID: 6705431138515550129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_9
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 758
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 611c53f1f4904b600800000000000000
+      internalID: 483021295466168598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_10
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 771
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 922b46584c0647340800000000000000
+      internalID: 4860616295007433257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_11
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 746
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5e9266f098b8b10800000000000000
+      internalID: 1984830760018372070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_12
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 589
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ac4d51766250010800000000000000
+      internalID: 1154371103680154251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_13
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 531
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70346ce227dd9e880800000000000000
+      internalID: -8581084132497014009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_14
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 493
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21eec645a59e43520800000000000000
+      internalID: 2681024252365041170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_15
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 448
+        width: 58
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d537d0ac4d2812d80800000000000000
+      internalID: -8277190789695704227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_16
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 483
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb38e757c1b810f20800000000000000
+      internalID: 3387141349105894332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_17
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 472
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ede593ff9764e40800000000000000
+      internalID: 5640329720414264864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_18
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 411
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9012bfe27a3056f90800000000000000
+      internalID: -6961153632448601847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 401
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20d6475a7f2475a0800000000000000
+      internalID: -6524537757656231892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_20
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 387
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa96eed93ebd59e0800000000000000
+      internalID: -1630938334276183303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_21
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 373
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adab377ff38a67420800000000000000
+      internalID: 2627472425305225946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_22
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 337
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c74876cc7187b530800000000000000
+      internalID: 3870704777653929922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_23
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 355
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7975426b8edbd91a0800000000000000
+      internalID: -6801071055073683561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_24
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 349
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7cc0f76028ed5170800000000000000
+      internalID: 8168940525000379515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_25
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 294
+        width: 68
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af35cd938d59a3e0800000000000000
+      internalID: -2041998136166760537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_26
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 343
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f5a6c9147f6d1d0800000000000000
+      internalID: -3326199413597380765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_27
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 339
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc92d99cf0338b20800000000000000
+      internalID: 3135403627050605760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_28
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 326
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc2564b6acd47690800000000000000
+      internalID: -7605211262172713800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_29
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 326
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58915590be913160800000000000000
+      internalID: 7003553376794417245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_30
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 309
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2dc9c14873339f20800000000000000
+      internalID: 3428140332951915821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_31
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 305
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b307f55d7d9080b0800000000000000
+      internalID: -5728405564376546379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_32
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 310
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb13dc824ac7c5680800000000000000
+      internalID: -8764993730268810820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_33
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 312
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090994e5f776fd510800000000000000
+      internalID: 1576092191343349904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_34
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 272
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95735f5b8c6e7fe50800000000000000
+      internalID: 6843191908533352281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_35
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 276
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790eb17900e075e80800000000000000
+      internalID: -8190062001651982185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_36
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 280
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee898b36b5a29a10800000000000000
+      internalID: 1914774993687383779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_37
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 242
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601f87c5e38791d70800000000000000
+      internalID: 9014368338393493766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_38
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 260
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df7f5be069c702e0800000000000000
+      internalID: -2159536078197915687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soul_icon_39
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 43
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab171e1f25cc1be0800000000000000
+      internalID: -1505111369289622620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      soul_icon_0: 9153879706664261714
+      soul_icon_1: -1409206245329384922
+      soul_icon_10: 4860616295007433257
+      soul_icon_11: 1984830760018372070
+      soul_icon_12: 1154371103680154251
+      soul_icon_13: -8581084132497014009
+      soul_icon_14: 2681024252365041170
+      soul_icon_15: -8277190789695704227
+      soul_icon_16: 3387141349105894332
+      soul_icon_17: 5640329720414264864
+      soul_icon_18: -6961153632448601847
+      soul_icon_19: -6524537757656231892
+      soul_icon_2: -4304568573157772154
+      soul_icon_20: -1630938334276183303
+      soul_icon_21: 2627472425305225946
+      soul_icon_22: 3870704777653929922
+      soul_icon_23: -6801071055073683561
+      soul_icon_24: 8168940525000379515
+      soul_icon_25: -2041998136166760537
+      soul_icon_26: -3326199413597380765
+      soul_icon_27: 3135403627050605760
+      soul_icon_28: -7605211262172713800
+      soul_icon_29: 7003553376794417245
+      soul_icon_3: -864988760708811011
+      soul_icon_30: 3428140332951915821
+      soul_icon_31: -5728405564376546379
+      soul_icon_32: -8764993730268810820
+      soul_icon_33: 1576092191343349904
+      soul_icon_34: 6843191908533352281
+      soul_icon_35: -8190062001651982185
+      soul_icon_36: 1914774993687383779
+      soul_icon_37: 9014368338393493766
+      soul_icon_38: -2159536078197915687
+      soul_icon_39: -1505111369289622620
+      soul_icon_4: 5134074964006629176
+      soul_icon_5: -3118616495612376694
+      soul_icon_6: -5775547363380549290
+      soul_icon_7: -233243387383000803
+      soul_icon_8: 6705431138515550129
+      soul_icon_9: 483021295466168598
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

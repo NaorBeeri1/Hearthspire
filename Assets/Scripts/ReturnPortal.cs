@@ -10,7 +10,7 @@ public class ReturnPortal : MonoBehaviour
         if (other.CompareTag("Player") || other.gameObject.name == "Player")
         {
             isNearPortal = true;
-            Debug.Log("Press 'E' to return safely to town!");
+            Debug.Log("Press 'E' to return safely to the hometown!");
         }
     }
 
@@ -33,8 +33,7 @@ public class ReturnPortal : MonoBehaviour
 
     void ReturnToTown()
     {
-        Debug.Log("Returning to town safe zone!");
-        // Change "HometownScene" to whatever your main town/house scene name is
-        SceneManager.LoadScene("HouseInteriorScene"); 
+        Debug.Log("Returning to HometownScene!");
+        SceneManager.LoadScene("HometownScene"); 
     }
 }

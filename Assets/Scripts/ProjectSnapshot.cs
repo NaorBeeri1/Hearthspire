@@ -42,7 +42,7 @@ public class ProjectSnapshot : EditorWindow
         // Copy everything straight to the system clipboard
         EditorGUIUtility.systemCopyBuffer = sb.ToString();
 
-        EditorUtility.DisplayDialog("Copied to Clipboard!", "The full project snapshot is now in your clipboard. Just click into our chat and press Ctrl+V to paste it!", "OK");
+        EditorUtility.DisplayDialog("Copied to Clipboard!", "The upgraded full project snapshot is now in your clipboard. Just click into our chat and press Ctrl+V to paste it!", "OK");
     }
 
     private static void DumpGameObject(GameObject obj, StringBuilder sb, int indent)

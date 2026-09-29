@@ -26,7 +26,7 @@ public class CameraFollow : MonoBehaviour
         float vertExtent = cam.orthographicSize;
         float horzExtent = vertExtent * Screen.width / Screen.height;
 
-        // Get background bounds
+        // Get background bounds (handles scaling automatically)
         Bounds bgBounds = backgroundSprite.bounds;
 
         // Set camera movement limits so the camera view never goes past the background edges

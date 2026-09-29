@@ -3,15 +3,21 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public int damageAmount = 1;
+    private float lastDamageTime = -1f;
+    public float damageCooldown = 0.5f; // Prevents multi-hit flooding
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.name == "Player")
+        if (other.CompareTag("Player") || other.name == "Player")
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            if (Time.time - lastDamageTime >= damageCooldown)
             {
-                playerHealth.TakeDamage(damageAmount);
+                PlayerHealth health = other.GetComponent<PlayerHealth>();
+                if (health != null)
+                {
+                    lastDamageTime = Time.time;
+                    health.TakeDamage(damageAmount);
+                }
             }
         }
     }
