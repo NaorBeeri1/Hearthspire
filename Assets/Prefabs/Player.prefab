@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2519429336350996082}
   - component: {fileID: 5447180777497456505}
   - component: {fileID: 1336772796602960451}
+  - component: {fileID: 1783554744326598187}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
+  backgroundSprite: {fileID: 0}
 --- !u!61 &5237897475258871795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -195,6 +197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 3
+  currentHealth: 0
+  healthBarFill: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!114 &1336772796602960451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,3 +214,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
   fireballPrefab: {fileID: 9144638826018535653, guid: bab7ccbdcbd81fd47a47f2e166242bfe, type: 3}
   fireballSpeed: 10
+--- !u!114 &1783554744326598187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3061084711854954388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc5cfba2ed31b94d853eeaf325ac257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAppearance
+  defaultSprite: {fileID: -3984793834014418241, guid: 44ecab3a402413247aed7b76eecd40fa, type: 3}
+  wizardSprite: {fileID: 21300000, guid: e568ff8a773e805469b5c8ba977aa919, type: 3}
