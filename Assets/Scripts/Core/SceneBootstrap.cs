@@ -51,20 +51,28 @@ public class SceneBootstrap : MonoBehaviour
             }
         }
 
-        // 4. Ensure exactly one valid EventSystem exists and is active
-        EventSystem[] eventSystems = FindObjectsByType<EventSystem>(FindObjectsSortMode.None);
-        if (eventSystems.Length > 1)
-        {
-            for (int i = 1; i < eventSystems.Length; i++)
-            {
-                Destroy(eventSystems[i].gameObject);
-            }
-        }
-        
+        // 4. Ensure exactly one valid EventSystem exists, is active, and persists
         if (EventSystem.current == null)
         {
-            GameObject esObj = new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
-            DontDestroyOnLoad(esObj);
+            EventSystem existing = FindAnyObjectByType<EventSystem>(FindObjectsInactive.Include);
+            if (existing != null)
+            {
+                existing.gameObject.SetActive(true);
+                existing.enabled = true;
+                DontDestroyOnLoad(existing.gameObject);
+                EventSystem.current = existing;
+            }
+            else
+            {
+                GameObject esObj = new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
+                DontDestroyOnLoad(esObj);
+            }
+        }
+        else
+        {
+            EventSystem.current.gameObject.SetActive(true);
+            EventSystem.current.enabled = true;
+            DontDestroyOnLoad(EventSystem.current.gameObject);
         }
 
         // 5. Spawn Minimap and Shop if prefabs are assigned

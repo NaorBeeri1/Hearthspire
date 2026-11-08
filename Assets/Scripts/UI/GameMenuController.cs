@@ -74,7 +74,6 @@ public class GameMenuController : MonoBehaviour
         }
         else
         {
-            // Ensure PersistentUI canvas and its parent game object are active in gameplay scenes
             if (PersistentUI.Instance != null)
             {
                 PersistentUI.Instance.gameObject.SetActive(true);
@@ -87,15 +86,30 @@ public class GameMenuController : MonoBehaviour
 
     void CleanupDuplicateEventSystems()
     {
-        EventSystem[] allEventSystems = FindObjectsByType<EventSystem>(FindObjectsSortMode.None);
+        EventSystem[] allEventSystems = FindObjectsByType<EventSystem>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
         if (allEventSystems.Length > 1)
         {
-            for (int i = 1; i < allEventSystems.Length; i++)
+            EventSystem keeper = EventSystem.current != null ? EventSystem.current : allEventSystems[0];
+            keeper.gameObject.SetActive(true);
+            keeper.enabled = true;
+            DontDestroyOnLoad(keeper.gameObject);
+
+            foreach (EventSystem es in allEventSystems)
             {
-                Destroy(allEventSystems[i].gameObject);
+                if (es != keeper)
+                {
+                    Destroy(es.gameObject);
+                }
             }
         }
-        else if (allEventSystems.Length == 0)
+        else if (allEventSystems.Length == 1)
+        {
+            allEventSystems[0].gameObject.SetActive(true);
+            allEventSystems[0].enabled = true;
+            DontDestroyOnLoad(allEventSystems[0].gameObject);
+        }
+        else
         {
             GameObject esObj = new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
             DontDestroyOnLoad(esObj);
@@ -380,8 +394,7 @@ public class GameMenuController : MonoBehaviour
         if (pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(true);
-            
-            // Force Canvas to override sorting and sit on top when paused
+
             Canvas canvas = pauseMenuUI.GetComponentInParent<Canvas>();
             if (canvas != null)
             {

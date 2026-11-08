@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 
 public class BlacksmithUIController : MonoBehaviour
 {
@@ -86,6 +88,17 @@ public class BlacksmithUIController : MonoBehaviour
             shopPanel.SetActive(isShopOpen);
         }
 
+        if (isShopOpen)
+        {
+            EnsureActiveEventSystem();
+            UpdateUI();
+            Debug.Log("[Blacksmith] Shop Opened.");
+        }
+        else
+        {
+            Debug.Log("[Blacksmith] Shop Closed.");
+        }
+
         if (GameManager.Instance != null)
         {
             if (GameManager.Instance.scoreText != null)
@@ -99,15 +112,30 @@ public class BlacksmithUIController : MonoBehaviour
                 GameManager.Instance.UpdateAllUI();
             }
         }
+    }
 
-        if (isShopOpen)
+    private void EnsureActiveEventSystem()
+    {
+        if (EventSystem.current == null)
         {
-            UpdateUI();
-            Debug.Log("[Blacksmith] Shop Opened.");
+            EventSystem existing = FindAnyObjectByType<EventSystem>(FindObjectsInactive.Include);
+            if (existing != null)
+            {
+                existing.gameObject.SetActive(true);
+                existing.enabled = true;
+                DontDestroyOnLoad(existing.gameObject);
+                EventSystem.current = existing;
+            }
+            else
+            {
+                GameObject esObj = new GameObject("EventSystem_AutoRestored", typeof(EventSystem), typeof(InputSystemUIInputModule));
+                DontDestroyOnLoad(esObj);
+            }
         }
         else
         {
-            Debug.Log("[Blacksmith] Shop Closed.");
+            EventSystem.current.gameObject.SetActive(true);
+            EventSystem.current.enabled = true;
         }
     }
 

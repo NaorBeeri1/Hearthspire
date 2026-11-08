@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 
 public class ShopUIController : MonoBehaviour
 {
@@ -78,6 +80,17 @@ public class ShopUIController : MonoBehaviour
             shopPanel.SetActive(isShopOpen);
         }
 
+        if (isShopOpen)
+        {
+            EnsureActiveEventSystem();
+            UpdateUI();
+            Debug.Log("[Shop] UI Opened.");
+        }
+        else
+        {
+            Debug.Log("[Shop] UI Closed.");
+        }
+
         if (GameManager.Instance != null)
         {
             if (GameManager.Instance.scoreText != null)
@@ -91,15 +104,30 @@ public class ShopUIController : MonoBehaviour
                 GameManager.Instance.UpdateAllUI();
             }
         }
+    }
 
-        if (isShopOpen)
+    private void EnsureActiveEventSystem()
+    {
+        if (EventSystem.current == null)
         {
-            UpdateUI();
-            Debug.Log("Shop UI Opened.");
+            EventSystem existing = FindAnyObjectByType<EventSystem>(FindObjectsInactive.Include);
+            if (existing != null)
+            {
+                existing.gameObject.SetActive(true);
+                existing.enabled = true;
+                DontDestroyOnLoad(existing.gameObject);
+                EventSystem.current = existing;
+            }
+            else
+            {
+                GameObject esObj = new GameObject("EventSystem_AutoRestored", typeof(EventSystem), typeof(InputSystemUIInputModule));
+                DontDestroyOnLoad(esObj);
+            }
         }
         else
         {
-            Debug.Log("Shop UI Closed.");
+            EventSystem.current.gameObject.SetActive(true);
+            EventSystem.current.enabled = true;
         }
     }
 
